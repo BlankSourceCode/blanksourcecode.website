@@ -4,6 +4,14 @@
   "description": "A personal website hosted at https://www.blanksourcecode.com created using metalsmith",
   "author": "James Lissiak",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BlankSourceCode/blanksourcecode.website.git"
+  },
+  "bugs": {
+    "url": "https://github.com/BlankSourceCode/blanksourcecode.website/issues"
+  },
+  "homepage": "https://github.com/BlankSourceCode/blanksourcecode.website",
   "scripts": {
     "build": "node build.js",
     "dev": "node build.js serve"
