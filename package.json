@@ -14,7 +14,8 @@
   "homepage": "https://github.com/BlankSourceCode/blanksourcecode.website",
   "scripts": {
     "build": "node build.js",
-    "dev": "node build.js serve"
+    "dev": "node build.js serve",
+    "deploy": "deploy.bat"
   },
   "devDependencies": {
     "eslint": "^5.14.1",
