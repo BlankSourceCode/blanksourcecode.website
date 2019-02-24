@@ -1,0 +1,49 @@
+{% extends "base.njk" %}
+
+{% block content %}
+<div class="topics">
+    <div id="post" class="page">
+        <article class="article post card" itemscope itemtype="http://schema.org/Article">
+            <div class="post-block">
+            <link itemprop="mainEntityOfPage" href="{{ '/' + path }}">
+            </div>
+            <header class="post-header" id="allTags">
+                <h1 class="post-title" itemprop="name headline">
+                    All Topics
+                </h1>
+            </header>
+            <main class="post-main" itemprop="articleBody">
+                <div class="allTopics">
+                    {% for tag, topic in allTopics %}
+                    <span class="post-tag"><i class="fa fa-tags"></i><a class="link" href="{{ '#' + tag }}" rel="tag">{{ tag }}</a></span>
+                    {% endfor %}
+                </div>
+            </main>
+        </article>
+    </div>
+    {% for tag, topic in allTopics %}
+    <div id="post" class="page">
+        <article class="article post card" itemscope itemtype="http://schema.org/Article">
+            <div class="post-block">
+            <link itemprop="mainEntityOfPage" href="{{ '/' + path }}">
+            </div>
+            <header class="post-header" id="{{ tag | safe }}">
+                <h1 class="post-title" itemprop="name headline">
+                    {{ tag | title }}
+                </h1>
+            </header>
+            <main class="post-main" itemprop="articleBody">
+                <ul class="topic-list">
+                {% for post in topic %}
+                    <li>
+                    <a class="link" href="{{ '/' + post.path }}">{{ post.title | safe }}</a>
+                    <span>- </span><span>{{ post.date | safe }}</span>
+                    </li>
+                {% endfor %}
+                </ul>
+            </main>
+        </article>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}

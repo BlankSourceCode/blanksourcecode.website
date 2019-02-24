@@ -1,0 +1,14 @@
+@import "_variables";
+
+.pager {
+    width: 100%;
+    text-align: center;
+    .pager-container {
+        display: inline-block;
+        font-weight: bold;
+
+        a.pager-current {
+            text-decoration: none;
+        }
+    }
+}

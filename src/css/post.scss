@@ -1,0 +1,78 @@
+@import "_variables";
+
+// Colors
+$color-tag-background: #1e1e1e;
+$color-tag-border: #ddd;
+
+// Fonts
+
+// Sizes
+$media-footer-header-nav-fold-width: 40em;
+
+.post {
+  .post-header {
+    text-align: left;
+
+    .post-title {
+      font-size: 2em;
+      font-style: bold;
+      margin: -0.2em 0 0.2em;
+    }
+
+    .post-title-simple {
+      margin: 0;
+    }
+
+    .post-title .post-title-link {
+      display: inline-block;
+      position: relative;
+      text-decoration: none;
+      border-bottom: none;
+      color: $color-foreground;
+
+    }
+
+    .post-meta span {
+      margin: 0 0.1em;
+    }
+
+    .post-tags {
+      .post-divider {
+        color: $color-hover-foreground;
+      }
+
+      .post-tag {
+        i {
+          padding-right: 0.4em;
+        }
+      }
+    }
+  }
+
+  .post-main {
+    line-height: 1.6em;
+
+    a.headerlink {
+      border: none;
+
+      &:hover {
+        border: none;
+      }
+      &:active {
+        top: 0;
+      }
+      &::before {
+        content: "#";
+        margin-right: 0.3em;
+      }
+    }
+  }
+
+  .post-footer {
+    text-align: center;
+
+    a.link.post-more-link {
+      color: $color-link-foreground;
+    }
+  }
+}
