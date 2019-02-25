@@ -47,7 +47,7 @@ function build(callback) {
         }))
         .use(pager({
             collection: 'posts',
-            elementsPerPage: 1,
+            elementsPerPage: 5,
             pagePattern: 'pages/:PAGE/index.html',
             index: 'index.html',
             paginationTemplatePath: 'templates/pager.html',

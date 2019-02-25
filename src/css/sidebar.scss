@@ -18,7 +18,7 @@ $color-search-foreground: #ddd;
     color: $color-search-foreground;
 
     .gsc-control-cse {
-      padding: 1em 2em;
+      padding: 0.8em 2em;
     }
 
     .gsc-input-box {
@@ -101,7 +101,7 @@ $color-search-foreground: #ddd;
 
   .twitter {
       margin-top: 0.6em;
-
+      min-height: 400px;
       a {
           color: $color-search-background;
           text-decoration: none;

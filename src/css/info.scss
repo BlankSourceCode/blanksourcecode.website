@@ -1,0 +1,42 @@
+@import "_variables";
+
+.info {
+    display: block;
+    text-align: center;
+    .author-avatar {
+      width: 40%;
+      display: block;
+      margin: 1em auto;
+      border: 0.3em solid $color-background;
+      border-radius: 50%;
+      box-shadow: 0 0 1em 0.5em rgba(0, 0, 0, 0.19);
+      transition: 1s ease-in-out;
+    }
+    .author-name {
+      color: $color-foreground;
+      font-size: 1em;
+      font-weight: bold;
+      margin: 0.5em 0;
+    }
+    .author-description {
+      color: $color-foreground;
+      font-size: 0.9em;
+      font-weight: normal;
+      margin: 0.5em 0;
+    }
+
+    .info-social {
+        font-size: 1.5em;
+        
+        a {
+            color: $color-foreground;
+            margin-right: 0.5em;
+
+            .fa-envelope {
+                font-size: 0.9em;
+                position: relative;
+                top: -1px;
+            }
+        }
+    }
+}

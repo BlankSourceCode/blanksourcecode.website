@@ -50,6 +50,16 @@ window.addEventListener('DOMContentLoaded', () => {
         setMenuState();
     });
 
+    const quotes = [
+        'file -> new project...',
+        '// todo: implement this',
+        'an empty file has a lot of potential',
+        'random adventures in coding',
+        'git init',
+        'starting again always sounds like a fun idea',
+    ];
+    document.querySelector('#title-quote').innerText = `"${quotes[Math.floor(Math.random() * quotes.length)]}"`;
+
     window.addEventListener('resize', () => {
         if (windowResizeDebounce) {
             clearTimeout(windowResizeDebounce);

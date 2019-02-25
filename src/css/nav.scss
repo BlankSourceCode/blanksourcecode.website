@@ -10,7 +10,43 @@ $color-nav-current-background: #3C3C3C;
 // Fonts
 
 // Sizes
-$media-footer-header-nav-fold-width: 40em;
+
+.nav-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: stretch;
+  flex-wrap: nowrap;
+
+  .nav-social {
+    display: none;
+    font-size: 1.5em;
+    
+    a {
+      color: $color-background;
+      margin-right: 0.5em;
+
+      .fa-envelope {
+        font-size: 0.9em;
+        position: relative;
+        top: -1px;
+      }
+    }
+  }
+}
+
+.header {
+  @media (max-width: $media-main-fold-width) {
+    .nav-container {
+      flex-direction: column-reverse;
+      text-align: center;
+      
+      .nav-social {
+        width: 100%;
+      }
+    }
+  }
+}
 
 .nav {
   position: relative;

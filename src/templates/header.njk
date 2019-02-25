@@ -4,7 +4,7 @@
     <div class="header-container">
       <div class="header-title">
         <h1 class="title">&gt; blank source code</a></h1>
-        <h2 class="subtitle">"file -> new project..."</h2>
+        <h2 id="title-quote" class="subtitle"></h2>
       </div>
       {% if theme.logo %}
       <div class="logo">
@@ -12,14 +12,23 @@
       </div>
       {% endif %}
     </div>
-    <nav id="nav" class="nav">
-      <a id="nav-toggle" class="nav-toggle" aria-hidden="true"><i class="fa fa-bars"></i></a>
-      <ul id="menu" role="menubar" aria-hidden="false">
-        {% for name, uri in mainMenu %}
-        <li role="menuitem"><a href="{{ uri }}"{% if "/" + path == uri %} class="current"{% endif %}>{{ name }}</a></li>
-        {% endfor %}
-      </ul>
-    </nav>
+    <div class="nav-container">
+      <nav id="nav" class="nav">
+        <a id="nav-toggle" class="nav-toggle" aria-hidden="true"><i class="fa fa-bars"></i></a>
+        <ul id="menu" role="menubar" aria-hidden="false">
+          {% for name, uri in mainMenu %}
+          <li role="menuitem"><a href="{{ uri }}"{% if "/" + path == uri %} class="current"{% endif %}>{{ name }}</a></li>
+          {% endfor %}
+        </ul>
+      </nav>
+      <div class="nav-social">
+        <a href="https://github.com/BlankSourceCode" target="_blank" title="github.com/BlankSourceCode"><i class="fa fa-github"></i></a>
+        <a href="https://twitter.com/BlankSourceCode" target="_blank" title="twitter.com/@BlankSourceCode"><i class="fa fa-twitter"></i></a>
+        <a href="https://www.youtube.com/channel/UCuLjKyj9PR4_3T4oexXz3Fg" target="_blank" title="youtube.com/BlankSourceCode"><i class="fa fa-youtube-play"></i></a>
+        <a href="https://www.linkedin.com/in/james-lissiak" target="_blank" title="linkedin.com/in/James-Lissiak"><i class="fa fa-linkedin"></i></a>
+        <a href="mailto:support@blanksourcecode.com" target="_blank" title="email"><i class="fa fa-envelope"></i></a>
+      </div>
+    </div>
   </div>
 </header>
 {% endblock %}

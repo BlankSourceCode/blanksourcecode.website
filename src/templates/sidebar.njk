@@ -22,18 +22,11 @@
   <div class="search-result-box" id="search-result"></div>
   {% include "info.njk" %}
   <div class="twitter">
-    <a class="twitter-timeline" data-theme="light" href="https://twitter.com/BlankSourceCode?ref_src=twsrc%5Etfw">Loading Tweets...</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+    <a class="twitter-timeline" data-theme="light" href="https://twitter.com/BlankSourceCode?ref_src=twsrc%5Etfw">Loading Tweets...</a> 
+    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
   </div>
   <div class="sidebar-sticky">
     <hr>
-    <div class="social-link sidebar-item">
-      <div><i class="fa fa-address-card"></i>{{ title }}</p></div>
-      <ul>
-        {% for e in theme.social.links %}
-        <li>{% if e.icon %}{{ e.icon }}{% endif %}<a href="{{ e.link }}" target="_blank">{{ e.name }}</a></li>
-        {% endfor %}
-      </ul>
-    </div>
   </div>
 </aside>
 {% endblock %}
