@@ -35,6 +35,7 @@
     "metalsmith-markdown": "^1.2.0",
     "metalsmith-pager": "^1.4.0",
     "metalsmith-permalinks": "^2.2.0",
+    "metalsmith-prism": "^3.1.1",
     "metalsmith-sass": "^1.6.0",
     "metalsmith-sitemap": "^1.2.2",
     "moment": "^2.24.0",

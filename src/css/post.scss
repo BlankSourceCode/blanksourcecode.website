@@ -66,6 +66,19 @@ $media-footer-header-nav-fold-width: 40em;
         margin-right: 0.3em;
       }
     }
+
+    .image-container {
+      overflow: hidden;
+      
+      img {
+        margin-left: 50%;
+        transform: translateX(-50%);
+      }
+    }
+
+    .code-section {
+      background-color: $color-header-background;
+    }
   }
 
   .post-footer {

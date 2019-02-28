@@ -10,6 +10,7 @@ const metalsmith = require('metalsmith');
 const layouts = require('metalsmith-layouts');
 const pager = require('metalsmith-pager');
 const permalinks = require('metalsmith-permalinks');
+const prism = require('metalsmith-prism');
 const sass = require('metalsmith-sass');
 const sitemap = require('metalsmith-sitemap');
 const copyProp = require('./src/libs/metalsmith-copy-prop');
@@ -33,7 +34,7 @@ function build(callback) {
         .ignore([
             'libs',
             'templates',
-            '**/src/css/!(styles.scss)',
+            '**/src/css/!(styles.scss|atom-dark-prism.css)',
         ])
         .use(collections({
             posts: {
@@ -53,7 +54,18 @@ function build(callback) {
             paginationTemplatePath: 'templates/pager.html',
             layoutName: 'index.njk',
         }))
-        .use(markdown())
+        .use(markdown({
+            langPrefix: 'language-',
+            pedantic: false,
+            gfm: true,
+            tables: true,
+            breaks: false,
+            sanitize: false,
+            smartLists: true,
+            smartypants: false,
+            xhtml: false,
+        }))
+        .use(prism())
         .use(copyProp({
             from: 'contents',
             to: 'initialContents',
