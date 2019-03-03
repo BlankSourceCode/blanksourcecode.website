@@ -25,6 +25,7 @@
   "dependencies": {
     "browser-sync": "^2.26.3",
     "jstransformer-nunjucks": "^0.5.0",
+    "marked": "^0.6.1",
     "metalsmith": "^2.3.0",
     "metalsmith-autotoc": "^0.1.5",
     "metalsmith-beautify": "^0.2.0",

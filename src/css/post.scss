@@ -69,11 +69,8 @@ $media-footer-header-nav-fold-width: 40em;
 
     .image-container {
       overflow: hidden;
-      
-      img {
-        margin-left: 50%;
-        transform: translateX(-50%);
-      }
+      display: flex;
+      justify-content: center;
     }
 
     .code-section {

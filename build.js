@@ -6,6 +6,7 @@ const collections = require('metalsmith-collections');
 const dateFormatter = require('metalsmith-date-formatter');
 const excerpts = require('metalsmith-excerpts');
 const markdown = require('metalsmith-markdown');
+const marked = require('marked');
 const metalsmith = require('metalsmith');
 const layouts = require('metalsmith-layouts');
 const pager = require('metalsmith-pager');
@@ -23,6 +24,14 @@ const config = {
         Topics: '/topics',
         About: '/about',
     },
+};
+
+const markdownRenderer = new marked.Renderer();
+markdownRenderer.image = function (href, title) {
+    return `
+      <div class="image-container">
+        <img src="${href}" alt="${title}" title="${title}" />
+      </div>`;
 };
 
 function build(callback) {
@@ -55,6 +64,7 @@ function build(callback) {
             layoutName: 'index.njk',
         }))
         .use(markdown({
+            renderer: markdownRenderer,
             langPrefix: 'language-',
             pedantic: false,
             gfm: true,
