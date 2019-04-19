@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:mobile="http://www.google.com/schemas/sitemap-mobile/1.0" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
+<url> <loc>https://blanksourcecode.com/index.html</loc> </url>
+<url> <loc>https://blanksourcecode.com/projects\index.html</loc> </url>
+<url> <loc>https://blanksourcecode.com/posts/2019/02/20/hello-world/index.html</loc> </url>
+<url> <loc>https://blanksourcecode.com/posts/2019/02/21/hello-world-mk-ii/index.html</loc> </url>
+<url> <loc>https://blanksourcecode.com/posts/2019/03/30/splitting-my-keyboard/index.html</loc> </url>
+<url> <loc>https://blanksourcecode.com/posts/2019/02/25/syntax-highlighting/index.html</loc> </url>
+<url> <loc>https://blanksourcecode.com/posts/2019/03/30/project-pages/index.html</loc> </url>
+<url> <loc>https://blanksourcecode.com/about/index.html</loc> </url>
+<url> <loc>https://blanksourcecode.com/topics/index.html</loc> </url>
+</urlset>
