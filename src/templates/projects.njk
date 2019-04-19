@@ -1,0 +1,34 @@
+{% extends "base.njk" %}
+
+{% block content %}
+<div class="posts">
+    {% for post in pagination.files %}
+        {% set title = post.title %}
+        {% set date = post.date %}
+        {% set path = post.path %}
+        {% set topics = post.topics %}
+        {% set contents = post.excerpt %}
+        {% set onIndexPage = true %}
+        {% include "post.njk" %}
+    {% endfor %}
+</div>
+<div class="pager">
+    <div class="pager-container">
+    {% if pagination.prev %}
+        <a class="pager-move link" href="{{ '/' + pagination.prev | replace('index.html', '') }}"><i class="fa fa-arrow-left" aria-hidden="true"></i></a>
+    {% endif %}
+    {% for i in pages %}
+        {% if i.index > pagination.current - 3 and i.index < pagination.current + 3 %}
+            {% if pagination.current == i.index %}
+            <span class="pager-current">[{{ i.index }}]</a>
+            {% else %}
+            <a class="link" href="{{ '/' + i.path | replace('index.html', '') }}">{{ i.index }}</a>
+            {% endif %}
+        {% endif %}
+    {% endfor %}
+    {% if pagination.next %}
+        <a class="pager-move link" href="{{ '/' + pagination.next | replace('index.html', '') }}"><i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+    {% endif %}
+    </div>
+</div>
+{% endblock %}

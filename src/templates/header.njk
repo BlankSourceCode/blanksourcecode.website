@@ -8,7 +8,7 @@
       </div>
       {% if theme.logo %}
       <div class="logo">
-        
+
       </div>
       {% endif %}
     </div>
@@ -17,7 +17,14 @@
         <a id="nav-toggle" class="nav-toggle" aria-hidden="true"><i class="fa fa-bars"></i></a>
         <ul id="menu" role="menubar" aria-hidden="false">
           {% for name, uri in mainMenu %}
-          <li role="menuitem"><a href="{{ uri }}"{% if "/" + path == uri %} class="current"{% endif %}>{{ name }}</a></li>
+          <li role="menuitem"><a href="{{ uri }}"
+          {%
+            if (uri == '/' and path.slice(0, 5) == 'pages') or
+            (uri == '/' and path == '') or
+            (uri != '/' and '/' + path.slice(0, uri.length -1) == uri)
+          %}
+            class="current"
+          {% endif %}>{{ name }}</a></li>
           {% endfor %}
         </ul>
       </nav>

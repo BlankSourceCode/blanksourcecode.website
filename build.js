@@ -21,6 +21,7 @@ const config = {
     mainMenu:
     {
         Home: '/',
+        Projects: '/projects',
         Topics: '/topics',
         About: '/about',
     },
@@ -51,6 +52,10 @@ function build(callback) {
                 sortBy: 'date',
                 reverse: true,
             },
+            projects: {
+                sortBy: 'date',
+                reverse: true,
+            },
             menus: {
                 pattern: 'pages/*.md',
             },
@@ -62,6 +67,14 @@ function build(callback) {
             index: 'index.html',
             paginationTemplatePath: 'templates/pager.html',
             layoutName: 'index.njk',
+        }))
+        .use(pager({
+            collection: 'projects',
+            elementsPerPage: 5,
+            pagePattern: 'projects/pages/:PAGE/index.html',
+            index: 'projects\\index.html',
+            paginationTemplatePath: 'templates/pager.html',
+            layoutName: 'projects.njk',
         }))
         .use(markdown({
             renderer: markdownRenderer,
