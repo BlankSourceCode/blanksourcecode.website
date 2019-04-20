@@ -209,7 +209,7 @@ a.link:hover::after {
 
 .header .header-container .header-title {
 	text-align: left;
-	width: 50%;
+	width: 75%;
 	word-wrap: break-word;
 	flex: 1 0 auto;
 	color: #eee
@@ -241,14 +241,14 @@ a.link:hover::after {
 }
 
 .header .header-container .logo {
-	text-align: right;
-	width: 50%;
+	text-align: center;
+	width: 25%;
 	flex: 1 0 auto
 }
 
 .header .header-container .logo img {
 	display: inline-block;
-	max-width: 20em;
+	max-width: 8em;
 	width: 100%
 }
 
