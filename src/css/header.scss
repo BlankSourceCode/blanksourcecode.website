@@ -26,7 +26,7 @@ $media-footer-header-nav-fold-width: 40em;
 
     .header-title {
       text-align: left;
-      width: 50%;
+      width: 75%;
       word-wrap: break-word;
       flex: 1 0 auto;
       color: $color-title;
@@ -56,12 +56,12 @@ $media-footer-header-nav-fold-width: 40em;
     }
 
     .logo {
-      text-align: right;
-      width: 50%;
+      text-align: center;
+      width: 25%;
       flex: 1 0 auto;
       img {
         display: inline-block;
-        max-width: 20em;
+        max-width: 8em;
         width: 100%;
       }
     }
