@@ -459,14 +459,41 @@ a.link:hover::after {
 	text-decoration: none
 }
 
+.project-title {
+	background-color: #1e1e1e;
+	color: #ddd;
+	margin: 0.5em 0.6em 0.5em 0.6em
+}
+
+.project-title .project-title-text {
+	margin-left: 0.8em;
+	padding: 0.33em 0;
+	margin-top: 8px;
+	margin-bottom: 8px
+}
+
 .post .post-header {
-	text-align: left
+	text-align: left;
+	position: relative
 }
 
 .post .post-header .post-title {
 	font-size: 2em;
 	font-style: bold;
-	margin: -0.2em 0 0.2em
+	margin: -0.2em 0 0.2em;
+	display: inline-block
+}
+
+.post .post-header .post-all-link {
+	display: inline-block;
+	position: absolute;
+	top: 0.6em;
+	padding-left: 10px
+}
+
+.post .post-header .post-all-link i {
+	font-size: 1.2em;
+	color: #555
 }
 
 .post .post-header .post-title-simple {
@@ -490,11 +517,13 @@ a.link:hover::after {
 }
 
 .post .post-header .post-tags .post-tag i {
+	color: #555;
 	padding-right: 0.4em
 }
 
 .post .post-main {
-	line-height: 1.6em
+	line-height: 1.6em;
+	overflow: hidden
 }
 
 .post .post-main a.headerlink {
@@ -514,10 +543,22 @@ a.link:hover::after {
 	margin-right: 0.3em
 }
 
+.post .post-main iframe {
+	display: block;
+	margin: 0 auto;
+	width: 100%;
+	max-width: 560px
+}
+
 .post .post-main .image-container {
-	overflow: hidden;
-	display: flex;
-	justify-content: center
+	overflow: hidden
+}
+
+.post .post-main .image-container img {
+	max-width: 100%;
+	object-fit: contain;
+	display: block;
+	margin: 0 auto
 }
 
 .post .post-main .code-section {
@@ -525,7 +566,8 @@ a.link:hover::after {
 }
 
 .post .post-footer {
-	text-align: center
+	text-align: center;
+	margin-top: 1em
 }
 
 .post .post-footer a.link.post-more-link {
@@ -695,9 +737,11 @@ a.link:hover::after {
 }
 
 .topic-list {
-	list-style-image: a;
-	list-style-image-text-decoration: none;
-	list-style-image-font-weight: bold
+	margin-left: -1em
+}
+
+.topic-list a {
+	text-decoration: none
 }
 
 .topic-list a.link::after {
@@ -705,13 +749,14 @@ a.link:hover::after {
 }
 
 .allTopics {
-	margin-left: 1.8em
+	margin-left: 0.5em
 }
 
 .allTopics .post-tag {
-	margin-right: 0.4em
+	margin-right: 0.8em
 }
 
 .allTopics .post-tag i {
-	padding-right: 0.4em
+	padding-right: 0.3em;
+	color: #555
 }
